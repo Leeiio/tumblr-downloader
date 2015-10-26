@@ -66,7 +66,7 @@ var Downloader = {
                     self.run(true);
                 }, 3000);
             } else {
-                console.log('Starting grab new page posts...'.bgGreen.black);
+                console.log('Starting grab new posts...'.bgGreen.black);
                 self.options.retried_time = 0;
                 self.options.total_page += 1;
                 self.options.start += self.options.num;

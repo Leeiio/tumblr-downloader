@@ -4,6 +4,8 @@ Easily download all the photos from a Tumblr blog.
 
 [![NPM](https://nodei.co/npm/tumblr-downloader.png?downloads=true&stars=true)](https://nodei.co/npm/tumblr-downloader/)
 
+![Screenshot](screenshot.png)
+
 ## Installation
 ```
 npm install -g tumblr-downloader
