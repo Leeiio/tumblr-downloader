@@ -1,0 +1,34 @@
+{
+  "name": "tumblr-downloader",
+  "version": "0.1.0",
+  "description": "Easily download all the photos from a Tumblr blog",
+  "main": "index.js",
+  "bin": {
+    "tumblr-dl": "tumblr.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Leeiio/tumblr-downloader.git"
+  },
+  "keywords": [
+    "Tumblr",
+    "Photos",
+    "Downloader"
+  ],
+  "author": "Leeiio (guaniu@gmail.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Leeiio/tumblr-downloader/issues"
+  },
+  "homepage": "https://github.com/Leeiio/tumblr-downloader#readme",
+  "dependencies": {
+    "mkdirp": "^0.5.0",
+    "request": "^2.51.0",
+    "async": "^1.4.2",
+    "colors": "^1.1.2",
+    "xml2js": "^0.4.12"
+  }
+}
