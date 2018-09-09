@@ -1,6 +1,5 @@
 #!/usr/bin/env node
 
-//依赖模块
 var fs = require('fs'),
     request = require("request"),
     mkdirp = require('mkdirp'),
@@ -111,7 +110,7 @@ var Downloader = {
                     photoset.forEach(function (photo) {
                         images.push(photo['photo-url'][0]._);
                     });
-                } else {
+                } else if (element['photo-url']) {
                     images.push(element['photo-url'][0]._);
                 }
             }, this);
