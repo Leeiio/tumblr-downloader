@@ -112,6 +112,19 @@ var Downloader = {
                     });
                 } else if (element['photo-url']) {
                     images.push(element['photo-url'][0]._);
+                } else if (element['regular-body']) {
+                    //匹配图片（g表示匹配所有结果i表示区分大小写）
+                    var imgReg = /<img.*?(?:>|\/>)/gi;
+                    //匹配src属性
+                    var srcReg = /src=[\'\"]?([^\'\"]*)[\'\"]?/i;
+                    var arr = element['regular-body'].match(imgReg);
+                    for (var i = 0; i < arr.length; i++) {
+                        var src = arr[i].match(srcReg);
+                        //获取图片地址
+                        if (src[1]) {
+                            images.push(src[1]);
+                        }
+                    }
                 }
             }, this);
             console.log(images.length + ' images found (' + self.options.start + ' to ' + (self.options.start + self.options.num) + ')');
