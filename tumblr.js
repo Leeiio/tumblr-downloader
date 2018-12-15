@@ -80,7 +80,14 @@ var Downloader = {
         }else{
             console.log('Crawling posts from ' + self.options.start + ' to ' + (self.options.start + self.options.num) + '...');
         }
-        request(url, function (err, response, body) {
+        var options = {
+            method: 'GET',
+            uri: url,
+            headers: {
+                'Content-Type': 'application/xml; charset=utf-8',
+            },
+        };
+        request(options, function (err, response, body) {
             if(!err && response.statusCode == 200) {
                 console.log('✔'.green + ' Crawled posts from ' + self.options.start + ' to ' + (self.options.start + self.options.num));
             }
